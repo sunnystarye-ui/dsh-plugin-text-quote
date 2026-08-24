@@ -1,0 +1,54 @@
+{
+  "name": "dsh-plugin-text-quote",
+  "version": "0.1.0",
+  "description": "Codex-style text annotation for DeepSeek Harness conversations: select text, add a quote with your comment, inject it into the composer, and expand sent annotations as a pill. / Codex 风格对话文字批注：选中原文加注释、引用进对话、发送后以「N 条注释」胶囊展开。",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnystarye-ui/dsh-plugin-text-quote.git"
+  },
+  "homepage": "https://github.com/sunnystarye-ui/dsh-plugin-text-quote",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "annotation",
+    "quote",
+    "notes",
+    "composer",
+    "批注",
+    "注释"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "sunnystarye-ui"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
